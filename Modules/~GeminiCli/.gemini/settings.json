@@ -1,10 +1,33 @@
 {
   "mcpServers": {
-    "powershell": {
+    "powershell-https": {
       "command": "pwsh",
       "args": [
         "-File",
-        "./mcp-powershell-server/mcp-powershell-stdio.ps1"
+        "C:/powershell/modules/mcp-powershell-server/src/servers/mcp-powershell-https.ps1"
+      ],
+      "env": {
+        "POWERSHELL_EXECUTION_POLICY": "RemoteSigned"
+      }
+    },
+    "powershell-stdio": {
+      "command": "pwsh",
+      "args": [
+        "-File",
+        "C:/powershell/modules/mcp-powershell-server/src/servers/mcp-powershell-stdio.ps1"
+      ],
+      "env": {
+        "POWERSHELL_EXECUTION_POLICY": "RemoteSigned"
+      }
+    },
+    "wordpress-cli": {
+      "command": "pwsh",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:/powershell/modules/mcp-powershell-server/src/servers/mcp-powershell-wordpress.ps1"
       ],
       "env": {
         "POWERSHELL_EXECUTION_POLICY": "RemoteSigned"

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "powershell-stdio": {
+      "command": "pwsh",
+      "args": [
+        "-File",
+        "C:/powershell/modules/mcp-powershell-server/src/servers/mcp-powershell-stdio.ps1"
+      ],
+      "env": {
+        "POWERSHELL_EXECUTION_POLICY": "RemoteSigned"
+      }
+    }
+  }
+}
